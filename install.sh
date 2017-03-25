@@ -1,3 +1,4 @@
 #!/bin/bash
-ln -s tmux.conf $HOME/.tmux.conf
-ln -s vim.rc    $HOME/.vim.rc
+SCRIPT=$(dirname $(realpath $0))
+ln -s $SCRIPT/tmux.conf $HOME/.tmux.conf
+ln -s $SCRIPT/vimrc     $HOME/.vimrc
