@@ -8,4 +8,5 @@ if [ ! -f $HOME/.bashrc ]; then
     exit 1;
 fi
 
-echo "source $SCRIPT/bashrc" >> $HOME/.bashrc
+echo "source $SCRIPT/bashrc"  >> $HOME/.bashrc
+echo "source $SCRIPT/inputrc" >> $HOME/.bashrc
