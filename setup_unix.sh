@@ -5,15 +5,16 @@ sudo apt install vim
 sudo apt install tmux
 sudo apt install ripgrep
 
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+mkdir -p /opt/bin
+mv nvim-linux-x86_64.appimage /opt/bin/nvim
+
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install 
 
 export FZF_BASE=~/.fzf
-
-# cppcodegen
-git clone git@bbgithub.dev.bloomberg.com:akhan323/cppcodegen.git /opt/cppcodegen
-ln -s /opt/cppcodegen/driver.py /bin/cppcodegen
 
 # when-changed
 wget https://github.com/joh/when-changed/archive/master.zip -P /tmp
@@ -45,4 +46,4 @@ then
     sudo apt-get install conky-manager # This is a ui to configure conky
 fi
 
-echo "You may have to run source ~/.bashrc"
+echo "You may have to run source ~/.bashrc and add /opt/bin to PATH"
